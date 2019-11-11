@@ -24,8 +24,6 @@
 			<string>Unlox is a beautiful redesign of MacID - the original and best app for unlocking your Mac with your fingerprint, wrist, and now your face.</string>
 			<key>developer</key>
 			<string>Kane Cheshire</string>
-			<key>category</key>
-			<string>Security</string>
 			<key>display_name</key>
 			<string>Unlox</string>
 			<key>name</key>
