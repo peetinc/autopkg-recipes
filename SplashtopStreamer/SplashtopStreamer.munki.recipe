@@ -45,7 +45,7 @@
 			<key>unattended_uninstall</key>
 			<true/>
 			<key>version</key>
-			<string>%VERSION%</string>
+			<string>%version%</string>
 			<key>preinstall_script</key>
 			<string>#!/bin/bash
 
