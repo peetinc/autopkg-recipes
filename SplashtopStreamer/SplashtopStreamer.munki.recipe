@@ -143,18 +143,18 @@ exit 0
 	<key>Process</key>
 	<array>
 	 <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>faux_root</key>
-                <string>%RECIPE_CACHE_DIR%/application_payload</string>
-                <key>installs_item_paths</key>
-                <array>
-                    <string>/Applications/Splashtop Streamer.app</string>
-                </array>
+    	<key>Arguments</key>
+        	<dict>
+            	<key>faux_root</key>
+            	<string>%RECIPE_CACHE_DIR%/application_payload</string>
+            	<key>installs_item_paths</key>
+            		<array>
+                   		<string>/Applications/Splashtop Streamer.app</string>
+               		</array>
             </dict>
-            <key>Processor</key>
-            <string>MunkiInstallsItemsCreator</string>
-        </dict>
+        <key>Processor</key>
+        <string>MunkiInstallsItemsCreator</string>
+    </dict>
         <dict>
             <key>Processor</key>
             <string>MunkiPkginfoMerger</string>
@@ -162,6 +162,8 @@ exit 0
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>force_munkiimport</key>
+                <true/>
                 <key>pkg_path</key>
                 <string>%pathname%</string>
                 <key>repo_subdirectory</key>
