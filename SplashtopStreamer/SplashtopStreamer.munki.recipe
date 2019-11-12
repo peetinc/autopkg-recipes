@@ -15,13 +15,15 @@
 		<key>RELEASE</key>
 		<string>fresh</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/Splasthtop</string>
+		<string>apps/Splashtop</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Support</string>
 		<key>MUNKI_DEVELOPER</key>
 		<string>Splashtop</string>
+		<key>MUNKI_DESCRIPTION</key>
+		<string>Splashtop is nifty.</string>
 		<key>DEPLOY_CODE</key>
-		<string>REPLACEME</string>
+		<string>-REPLACE-ME-</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -31,7 +33,7 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
-			<string>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs: Writer, Calc, Impress, Draw, Math and Base.</string>
+			<string>%MUNKI_DESCRIPTION%</string>
 			<key>developer</key>
 			<string>%MUNKI_DEVELOPER%</string>
 			<key>display_name</key>
@@ -42,6 +44,8 @@
 			<true/>
 			<key>unattended_uninstall</key>
 			<true/>
+			<key>version</key>
+			<string>%VERSION%</string>
 			<key>preinstall_script</key>
 			<string>#!/bin/bash
 
