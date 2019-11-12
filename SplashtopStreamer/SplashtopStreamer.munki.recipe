@@ -144,7 +144,7 @@ exit 0
 			<key>Arguments</key>
 			<dict>
 				<key>force_munkiimport</key>
-				<%FORCE_MUNKIIMPORT%/>
+				<true/>
 				<key>pkg_path</key>
 				<string>%pathname%</string>
 				<key>repo_subdirectory</key>
