@@ -44,8 +44,6 @@
 			<true/>
 			<key>unattended_uninstall</key>
 			<true/>
-			<key>version</key>
-			<string>%version%</string>
 			<key>preinstall_script</key>
 			<string>#!/bin/bash
 
@@ -144,19 +142,34 @@ exit 0
 	<string>com.github.peetinc.download.SplashtopStreamer</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>force_munkiimport</key>
-				<true/>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-		</dict>
+	 <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>faux_root</key>
+                <string>%RECIPE_CACHE_DIR%/application_payload</string>
+                <key>installs_item_paths</key>
+                <array>
+                    <string>/Applications/Splashtop Streamer.app</string>
+                </array>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiInstallsItemsCreator</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
 	</array>
 </dict>
 </plist>
