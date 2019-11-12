@@ -21,7 +21,7 @@
 		<key>MUNKI_DEVELOPER</key>
 		<string>Splashtop</string>
 		<key>DEPLOY_CODE</key>
-		<string>SSKJRHP7WWL2</string>
+		<string>REPLACEME</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
