@@ -8,6 +8,8 @@
 	<string>com.github.peetinc.munki.SplasthtopStreamer</string>
 	<key>Input</key>
 	<dict>
+		<key>FORCE_MUNKIIMPORT</key>
+		<string>true</string>
 		<key>NAME</key>
 		<string>SplasthtopStreamer</string>
 		<key>DISPLAY_NAME</key>
@@ -143,6 +145,8 @@ exit 0
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>force_munkiimport</key>
+				<%FORCE_MUNKIIMPORT%/>
 				<key>pkg_path</key>
 				<string>%pathname%</string>
 				<key>repo_subdirectory</key>
