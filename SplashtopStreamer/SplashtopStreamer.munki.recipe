@@ -146,7 +146,7 @@ exit 0
     	<key>Arguments</key>
         	<dict>
             	<key>faux_root</key>
-            	<string>%RECIPE_CACHE_DIR%/application_payload</string>
+            	<string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
             	<key>installs_item_paths</key>
             		<array>
                    		<string>/Applications/Splashtop Streamer.app</string>
