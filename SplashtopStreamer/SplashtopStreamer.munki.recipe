@@ -21,7 +21,7 @@
 		<key>MUNKI_DEVELOPER</key>
 		<string>Splashtop</string>
 		<key>MUNKI_DESCRIPTION</key>
-		<string>Splashtop is nifty.</string>
+		<string>Splashtop is nifty. %version%</string>
 		<key>DEPLOY_CODE</key>
 		<string>-REPLACE-ME-</string>
 		<key>pkginfo</key>
@@ -138,18 +138,6 @@ exit 0
 		</string>
 		</dict>
 	</dict>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>appcast_url</key>
-				<string>%SPARKLE_FEED_URL%</string>
-			</dict>
-			<key>Processor</key>
-			<string>SparkleUpdateInfoProvider</string>
-		</dict>
-	</array>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
