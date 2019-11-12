@@ -8,8 +8,6 @@
 	<string>com.github.peetinc.munki.SplasthtopStreamer</string>
 	<key>Input</key>
 	<dict>
-		<key>FORCE_MUNKIIMPORT</key>
-		<string>true</string>
 		<key>NAME</key>
 		<string>SplasthtopStreamer</string>
 		<key>DISPLAY_NAME</key>
