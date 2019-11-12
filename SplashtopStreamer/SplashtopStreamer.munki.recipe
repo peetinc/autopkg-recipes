@@ -138,6 +138,18 @@ exit 0
 		</string>
 		</dict>
 	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>appcast_url</key>
+				<string>%SPARKLE_FEED_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>SparkleUpdateInfoProvider</string>
+		</dict>
+	</array>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
