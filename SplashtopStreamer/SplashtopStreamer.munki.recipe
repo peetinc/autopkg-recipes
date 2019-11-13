@@ -158,7 +158,7 @@ exit 0
 	<dict>
         <key>Arguments</key>
         <dict>
-            <key>flat_pkg_path</key>
+            <key>pkg_payload_path</key>
             <string>%pathname%/PKGs/*.pkg</string>
             <key>destination_path</key>
             <string>%RECIPE_CACHE_DIR%/Payload</string>
@@ -166,7 +166,7 @@ exit 0
             <false/>
          </dict>
         <key>Processor</key>
-        <string>FlatPkgUnpacker</string>
+        <string>PkgPayloadUnpacker</string>
     </dict>
 	 <dict>
     	<key>Arguments</key>
