@@ -146,7 +146,7 @@ exit 0
             <key>Arguments</key>
             <dict>
                 <key>flat_pkg_path</key>
-                <string>%pathname%</string>
+                <string>%pathname%/*.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
                 <key>purge_destination</key>
