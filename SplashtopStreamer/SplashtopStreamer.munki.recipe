@@ -145,15 +145,13 @@ exit 0
 	<dict>
             <key>Arguments</key>
             <dict>
-                <key>flat_pkg_path</key>
+                <key>pkg_path</key>
                 <string>%pathname%/*.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
-                <key>purge_destination</key>
-                <false/>
             </dict>
             <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
+            <string>PkgExtractor</string>
         </dict>
 	 
 	 <dict>
