@@ -143,17 +143,31 @@ exit 0
 	<key>Process</key>
 	<array>
 	<dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%pathname%/*.pkg</string>
-                <key>extract_root</key>
-                <string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
-            </dict>
-            <key>Processor</key>
-            <string>PkgExtractor</string>
+        <key>Arguments</key>
+        <dict>
+            <key>flat_pkg_path</key>
+            <string>%pathname%/*.pkg</string>
+            <key>destination_path</key>
+            <string>%RECIPE_CACHE_DIR%/PKGs</string>
+            <key>purge_destination</key>
+            <false/>
+         </dict>
+        <key>Processor</key>
+        <string>FlatPkgUnpacker</string>
         </dict>
-	 
+	<dict>
+        <key>Arguments</key>
+        <dict>
+            <key>flat_pkg_path</key>
+            <string>%pathname%/PKGs/*.pkg</string>
+            <key>destination_path</key>
+            <string>%RECIPE_CACHE_DIR%/Payload</string>
+            <key>purge_destination</key>
+            <false/>
+         </dict>
+        <key>Processor</key>
+        <string>FlatPkgUnpacker</string>
+    </dict>
 	 <dict>
     	<key>Arguments</key>
         	<dict>
