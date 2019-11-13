@@ -175,19 +175,19 @@ exit 0
             	<string>%RECIPE_CACHE_DIR%/tmp/splashtopStreamer.pkg_payload</string>
             	<key>installs_item_paths</key>
             		<array>
-                   		<string>Splashtop Streamer.app</string>
+                   		<string>/Splashtop Streamer.app</string>
                		</array>
             </dict>
         <key>Processor</key>
         <string>MunkiInstallsItemsCreator</string>
     </dict>
-        <dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
+    <dict>
+    	<key>Processor</key>
+        <string>MunkiPkginfoMerger</string>
+    </dict>
+    <dict>
+        <key>Arguments</key>
+	        <dict>
                 <key>force_munkiimport</key>
                 <true/>
                 <key>pkg_path</key>
@@ -195,8 +195,8 @@ exit 0
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
+        <key>Processor</key>
+	    <string>MunkiImporter</string>
         </dict>
 	</array>
 </dict>
