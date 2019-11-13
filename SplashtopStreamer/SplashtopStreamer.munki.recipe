@@ -12,8 +12,6 @@
 		<string>SplasthtopStreamer</string>
 		<key>DISPLAY_NAME</key>
 		<string>Splasthtop Streamer</string>
-		<key>RELEASE</key>
-		<string>fresh</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/Splashtop</string>
 		<key>MUNKI_CATEGORY</key>
@@ -21,7 +19,7 @@
 		<key>MUNKI_DEVELOPER</key>
 		<string>Splashtop</string>
 		<key>MUNKI_DESCRIPTION</key>
-		<string>Install the Splashtop Streamer on any Mac that you want to remotely access, view, and control from another device using the Splashtop app.</string>
+		<string>Splashtop is nifty. %version%</string>
 		<key>DEPLOY_CODE</key>
 		<string>-REPLACE-ME-</string>
 		<key>pkginfo</key>
@@ -40,66 +38,148 @@
 			<string>%DISPLAY_NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
-			<key>minimum_os_version</key>
-			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
 			<key>unattended_uninstall</key>
 			<true/>
+			<key>preinstall_script</key>
+			<string>#!/bin/bash
+
+#Script to create /Users/Shared/SplashtopStreamer/.PreInstall with appropriate variables.
+#If /Users/Shared/SplashtopStreamer/.PreInstall is in place when splashtop package is installed then it will be correctly deployed
+
+if [ ! -d /Users/Shared/SplashtopStreamer ]; then
+  mkdir -p /Users/Shared/SplashtopStreamer;
+  chmod -R 777 /Users/Shared/SplashtopStreamer
+fi
+
+#Do not install Soundflower driver. This helps with deployment via Munki.
+#Installing Soundflower driver will hang if the Mac has no users logged in at the time of deployment.
+Install_Driver=false
+
+EulaAccepted=true
+HidePreferenceDomainSelection=true
+
+#ShowDeployMode must be true to attempt to deploy
+ShowDeployMode=true
+SplashtopAccount=""
+DeployCode="%DEPLOY_CODE%"
+
+#show deploy warning
+ShowDeployLoginWarning=false
+
+# This will be the name of the computer in Splashtop UI, not the computer hostname. Will be set to mac name by default
+#ComputerName=`scutil --get ComputerName`
+#HostName="$ComputerName"
+HostName="`scutil --get ComputerName`"
+
+# Request permission to connect (0:off, 1:reject after request expires, 2:connect after request expires).
+EnablePermissionProtection=0
+
+#Require additional password to connect EnableOSCredential to require macOS account auth"
+init_security_code=""
+EnableSecurityCodeProtection=false
+EnableOSCredential=true
+
+#loopback connection only
+LegacyConnectionLoopbackOnly=false
+
+#Hide Menubar icon
+HideTrayIcon=false
+
+#Default client name on connection bubble.
+DefaultClientDeviceName=""
+
+#Do NOT show Streamer UI after installation both need to be false
+FirstTimeClose=false
+FirstTimeLogin=false
+
+if [ "$Install_Driver" == false ]; then
+No_Driver="/Users/Shared/SplashtopStreamer/.NoDriver"
+touch "$No_Driver"
+echo NO DRIVER
+fi
+
+/usr/libexec/PlistBuddy -c "Add Common:EulaAccepted bool $EulaAccepted" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add Common:HidePreferenceDomainSelection bool $HidePreferenceDomainSelection" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:ShowDeployLoginWarning bool $ShowDeployLoginWarning" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:ShowDeployMode bool $ShowDeployMode" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:SplashtopAccount string $SplashtopAccount" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:DeployCode string $DeployCode" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:DeployTeamNameCache string" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:DeployTeamOwnerCache string" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:LastDeployCode string" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:TeamCode string" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:TeamCodeInUse string" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:HostName string $HostName" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:EnablePermissionProtection integer $EnablePermissionProtection" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:init_security_code string $init_security_code" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:EnableSecurityCodeProtection bool $EnableSecurityCodeProtection" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:EnableOSCredential bool $EnableOSCredential" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:LegacyConnectionLoopbackOnly bool $LegacyConnectionLoopbackOnly" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:HideTrayIcon bool $HideTrayIcon" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:DefaultClientDeviceName string $DefaultClientDeviceName" /Users/Shared/SplashtopStreamer/.PreInstall
+
+/usr/libexec/PlistBuddy -c "Add STP:FirstTimeClose bool $FirstTimeClose" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:FirstTimeLogin bool $FirstTimeLogin" /Users/Shared/SplashtopStreamer/.PreInstall
+
+exit 0
+		</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peetinc.download.SplashtopBusinessAccess</string>
+	<string>com.github.peetinc.download.SplashtopStreamer</string>
 	<key>Process</key>
 	<array>
 	<dict>
-        <key>Processor</key>
-        <string>FlatPkgUnpacker</string>
         <key>Arguments</key>
         <dict>
             <key>flat_pkg_path</key>
             <string>%pathname%/*.pkg</string>
             <key>destination_path</key>
             <string>%RECIPE_CACHE_DIR%/tmp/PKGs</string>
-            <key>purge_destination</key>
-            <false/>
-        </dict>
+         </dict>
+        <key>Processor</key>
+        <string>FlatPkgUnpacker</string>
         </dict>
 	<dict>
-	    <key>Processor</key>
-        <string>PkgPayloadUnpacker</string>
         <key>Arguments</key>
         <dict>
             <key>pkg_payload_path</key>
             <string>%RECIPE_CACHE_DIR%/tmp/PKGs/splashtopStreamer.pkg/Payload</string>
             <key>destination_path</key>
-            <string>%RECIPE_CACHE_DIR%/tmp/splashtopStreamer.pkg_payload/Applications/</string>
-            <key>purge_destination</key>
-            <false/>
+            <string>%RECIPE_CACHE_DIR%/tmp/payload/Applications/</string>
          </dict>
+        <key>Processor</key>
+        <string>PkgPayloadUnpacker</string>
     </dict>
-	<dict>
-	 	<key>Processor</key>
-        <string>MunkiInstallsItemsCreator</string>
+	 <dict>
     	<key>Arguments</key>
         	<dict>
             	<key>faux_root</key>
-            	<string>%RECIPE_CACHE_DIR%/tmp/splashtopStreamer.pkg_payload</string>
+            	<string>%RECIPE_CACHE_DIR%/tmp/payload</string>
             	<key>installs_item_paths</key>
             		<array>
                    		<string>/Applications/Splashtop Streamer.app</string>
                		</array>
             </dict>
+        <key>Processor</key>
+        <string>MunkiInstallsItemsCreator</string>
     </dict>
     <dict>
     	<key>Processor</key>
         <string>MunkiPkginfoMerger</string>
     </dict>
     <dict>
-    	<key>Processor</key>
-        <string>MunkiPkginfoMerger</string>
      	<key>Arguments</key>
         <dict>
             <key>additional_pkginfo</key>
@@ -108,10 +188,10 @@
 				<string>%version%</string>
 			</dict>
 		</dict>
+    	<key>Processor</key>
+        <string>MunkiPkginfoMerger</string>
     </dict>
     <dict>
-        <key>Processor</key>
-	    <string>MunkiImporter</string>
         <key>Arguments</key>
 	        <dict>
                 <key>force_munkiimport</key>
@@ -121,18 +201,9 @@
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
-        </dict>
-    <dict>
         <key>Processor</key>
-        <string>PathDeleter</string>
-        <key>Arguments</key>
-        <dict>
-            <key>path_list</key>
-            <array>
-                <string>%RECIPE_CACHE_DIR%/tmp/</string>
-            </array>
+	    <string>MunkiImporter</string>
         </dict>
-    </dict>
 	</array>
 </dict>
 </plist>
