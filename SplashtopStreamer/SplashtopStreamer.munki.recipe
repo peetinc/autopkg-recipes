@@ -211,6 +211,7 @@ exit 0
             <array>
                 <string>%RECIPE_CACHE_DIR%/tmp/</string>
             </array>
+        </dict>
         <key>Processor</key>
         <string>PathDeleter</string>
     </dict>
