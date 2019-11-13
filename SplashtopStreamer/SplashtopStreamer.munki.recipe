@@ -159,7 +159,7 @@ exit 0
         <key>Arguments</key>
         <dict>
             <key>pkg_payload_path</key>
-            <string>%pathname%/PKGs/splashtopStreamer.pkg/Payload/</string>
+            <string>%pathname%/PKGs/splashtopStreamer.pkg</string>
             <key>destination_path</key>
             <string>%RECIPE_CACHE_DIR%/Payload</string>
             <key>purge_destination</key>
