@@ -145,6 +145,18 @@ exit 0
 	 <dict>
     	<key>Arguments</key>
         	<dict>
+            	<key>pkg_path</key>
+            	<string>%pathname%</string>
+            	<key>extract_root</key>
+                <string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
+            </dict>
+        <key>Processor</key>
+        <string>PkgExtractor</string>
+    </dict>
+	 
+	 <dict>
+    	<key>Arguments</key>
+        	<dict>
             	<key>faux_root</key>
             	<string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
             	<key>installs_item_paths</key>
