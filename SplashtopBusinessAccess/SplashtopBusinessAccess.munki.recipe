@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current version of Splashtop streamer</string>
+	<string>Downloads the current version of Splashtop Business Access.</string>
 	<key>Identifier</key>
-	<string>com.github.peetinc.munki.SplasthtopStreamer</string>
+	<string>com.github.peetinc.munki.SplashtopBusinessAccess</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
