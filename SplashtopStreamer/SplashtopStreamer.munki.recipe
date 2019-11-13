@@ -142,17 +142,19 @@ exit 0
 	<string>com.github.peetinc.download.SplashtopStreamer</string>
 	<key>Process</key>
 	<array>
-	 <dict>
-    	<key>Arguments</key>
-        	<dict>
-            	<key>pkg_path</key>
-            	<string>%pathname%</string>
-            	<key>extract_root</key>
+	<dict>
+            <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/SplashtopStreamer_payload</string>
+                <key>purge_destination</key>
+                <false/>
             </dict>
-        <key>Processor</key>
-        <string>PkgExtractor</string>
-    </dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+        </dict>
 	 
 	 <dict>
     	<key>Arguments</key>
