@@ -19,7 +19,7 @@
 		<key>MUNKI_DEVELOPER</key>
 		<string>Splashtop</string>
 		<key>MUNKI_DESCRIPTION</key>
-		<string>Splashtop is nifty. %version%</string>
+		<string>Splashtop Business Access provides fast, simple, secure remote computer access for individuals and teams. With it you can access computers remotely from any device.</string>
 		<key>DEPLOY_CODE</key>
 		<string>-REPLACE-ME-</string>
 		<key>pkginfo</key>
