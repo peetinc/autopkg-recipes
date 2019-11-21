@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Downloads Kerio Connect Client</string>   
     <key>Identifier</key>
-    <string>com.github.peetinc.download.kerio-connect-client</string> 
+    <string>com.github.peetinc.download.KerioConnectClient</string> 
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Kerio Connect Client</string>
+        <string>KerioConnectClient</string>
         
     </dict>
     <key>MinimumVersion</key>
@@ -29,7 +29,7 @@
 				<string>--location</string>
 			</array>
 			<key>filename</key>
-			<string>KerioConnectClient.dmg</string>
+			<string>%NAME%.dmg</string>
         </dict>
         <dict>
             <key>Processor</key>
