@@ -25,9 +25,9 @@
                 <string>https://app-update.kerio.com/connect/client/download?target=darwin-x64</string>
             </dict>
 			<key>curl_opts</key>
-			<array>
-            	<string>-L</string>
-        	</array>       
+				<array>
+					<string>--location</string>
+				</array>
         </dict>
         <dict>
             <key>Processor</key>
