@@ -42,12 +42,6 @@
             <dict>
                 <key>input_path</key>
                 <string>%pathname%/Kerio Connect.app</string>
-                <key>expected_authority_names</key>
-        			<array>
-            			<string>Developer ID Installer: Kerio Technologies (7WC9K73933)</string>
-            			<string>Developer ID Certification Authority</string>
-            			<string>Apple Root CA</string>
-        			</array>
         	</dict>
     	</dict>
     </array>
