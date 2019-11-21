@@ -3,11 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads Kerio Connect Client</string>
-    
+    <string>Downloads Kerio Connect Client</string>   
     <key>Identifier</key>
-    <string>com.github.peetinc.download.kerio-connect-client</string>
-    
+    <string>com.github.peetinc.download.kerio-connect-client</string> 
     <key>Input</key>
     <dict>
         <key>NAME</key>
