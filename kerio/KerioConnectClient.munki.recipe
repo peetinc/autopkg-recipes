@@ -11,7 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Kerio Connect Client Client</string>
+        <string>KerioConnectClient</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/kerio</string>
         <key>pkginfo</key>
@@ -23,7 +23,7 @@
             <key>description</key>
             <string>Kerio Connect Client is used to connect to any Kerio Connect mail server.</string>
             <key>display_name</key>
-            <string>Kerio Connect Client Client</string>
+            <string>Kerio Connect Client</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
