@@ -3,9 +3,9 @@
 <plist version="1.0">
     <dict>
         <key>Description</key>
-        <string>Downloads the latest version of NoMADLogin-AD</string>
+        <string>Downloads the latest version of NoMAD Login AD</string>
         <key>Identifier</key>
-        <string>com.github.peetinc.recipes.download.NoMADLogin-AD</string>
+        <string>com.github.peetinc.recipes.download.NoMADLoginAD</string>
         <key>Input</key>
         <dict>
             <key>NAME</key>
