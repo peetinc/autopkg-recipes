@@ -30,23 +30,23 @@
             </dict>
             <dict>
 			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
+				<string>EndOfCheckPhase</string>
 			</dict>
-           <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%/%NAME%.pkg</string>
-        	</dict>
-        	<key>expected_authority_names</key>
-        	<array>
-         		<string>Developer ID Installer: Orchard & Grove Inc. (VRPY9KHGX6)</string>
-    			<string>Developer ID Certification Authority</string>
-       			<string>Apple Root CA</string>
-       		</array>
-    	</dict>
+			<dict>   
+    		<key>Processor</key>   
+    		<string>CodeSignatureVerifier</string>   
+    		<key>Arguments</key>   
+   			<dict>   
+        		<key>input_path</key>   
+        		<string>%pathname%</string>
+        		<key>expected_authority_names</key>
+        		<array>
+            		<string>Developer ID Installer: Orchard &#038; Grove Inc. (VRPY9KHGX6)</string>
+            		<string>Developer ID Certification Authority</string>
+            		<string>Apple Root CA</string>
+        		</array>
+   			 </dict>
+   			 </dict>
         </array>
     </dict>
 </plist>
