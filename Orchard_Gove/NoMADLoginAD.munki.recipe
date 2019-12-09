@@ -3,12 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads NoMAD Login AD and imports into munki.</string>
-    
-    This recipe differs from the ones in bochoven-recipes in the following ways:
-		- This one adds pre/post install script variables
-    
-    <key>Identifier</key>
+    <string>Downloads NoMAD Login AD and imports into munki.
+This recipe differs from the ones in bochoven-recipes in the following ways:
+- This one adds pre/post install script variables
+	</string>  
+	<key>Identifier</key>
     <string>com.github.peetinc.munki.NoMADLoginAD</string>
     <key>Input</key>
     <dict>
