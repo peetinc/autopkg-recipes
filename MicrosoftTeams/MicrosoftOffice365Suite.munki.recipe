@@ -11,13 +11,15 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MicrosoftOffice365</string>
+        <string>MicrosoftOffice</string>
         <key>DISPLAY_NAME</key>
-        <string>Microsoft Office 365</string>
+        <string>Microsoft Office</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Microsoft/O365</string>
         <key>CATEGORY</key>
 		<string>Productivity</string>
+        <key>MINIMUM_OS_VERSION</key>
+		<string>10.13.6</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -25,7 +27,7 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Microsoft Teams is cloud-based team collaboration software that is part of the Office 365 suite of applications. The core capabilities in Microsoft Teams include business messaging, calling, video meetings and file sharing.</string>
+            <string>Unmistakably Office, designed for Mac. Do your best work—anywhere, anytime and with anyone.</string>
             <key>display_name</key>
             <string>%DISPLAY_NAME%</string>
             <key>name</key>
@@ -36,6 +38,8 @@
 			<string>%CATEGORY%</string>
 			<key>developer</key>
 			<string>Micrsoft</string>
+			<key>minimum_os_version</key>
+			<string>%MINIMUM_OS_VERSION%</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
