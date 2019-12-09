@@ -3,11 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads NoMAD Login AD and imports into munki./string>
-    
+    <string>Downloads NoMAD Login AD and imports into munki.</string>
     <key>Identifier</key>
     <string>com.github.peetinc.munki.NoMADLoginAD</string>
-    
     <key>Input</key>
     <dict>
         <key>NAME</key>
