@@ -6,7 +6,7 @@
     <string>Downloads Microsoft Teams and imports into munki.</string>
     
     <key>Identifier</key>
-    <string>com.github.peetinc.munki.KerioControlVPNClient</string>
+    <string>com.github.peetinc.munki.MicrosoftTeams</string>
     
     <key>Input</key>
     <dict>
