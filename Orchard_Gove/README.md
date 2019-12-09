@@ -1,7 +1,5 @@
-# autopkg-recipes
+# Orchard_Grove
 
-This si a messy scratch space for me to work on recipes. Please don't "autopkg repo-add" this repo. And for the love of god if you do, use overrides.
+There are PREINSTALL and POSTINSTALL script variables enabled in this recipe. Most of the ways to deploy NoMAD AD Login needs a pre and/or post install script. If you're using profiles to configure the settings, disable or ignore the default scripts.
 
-I'm putting stable recipes over here: https://github.com/peetinc/peetinc-recipes
-
-Which will hopefully move on over to https://github.com/autopkg/peetinc-recipes at some point.
+My hope is to make this as easy as possible to use for the most folks.
