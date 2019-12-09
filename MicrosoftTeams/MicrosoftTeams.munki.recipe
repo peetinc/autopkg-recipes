@@ -12,10 +12,10 @@
     <dict>
         <key>NAME</key>
         <string>MicrosoftTeams</string>
-        <key>%DISPLAY_NAME%</key>
+        <key>DISPLAY_NAME</key>
         <string>Microsoft Teams</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/microsoft</string>
+        <string>apps/Microsoft/Teams</string>
         <key>CATEGORY</key>
 		<string>Productivity</string>
         <key>pkginfo</key>
