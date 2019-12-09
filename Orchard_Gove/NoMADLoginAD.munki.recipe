@@ -4,6 +4,10 @@
 <dict>
     <key>Description</key>
     <string>Downloads NoMAD Login AD and imports into munki.</string>
+    
+    This recipe differs from the ones in bochoven-recipes in the following ways:
+		- This one adds pre/post install script variables
+    
     <key>Identifier</key>
     <string>com.github.peetinc.munki.NoMADLoginAD</string>
     <key>Input</key>
@@ -14,6 +18,8 @@
         <string>apps/Orchard_and_Grove</string>
         <key>DISPLAY_NAME</key>
         <string>NoMAD Login AD</string>
+        <key>MUNKI_CATEGORY</key>
+        <string>Security</string>
         <key>PREINSTALL</key>
         <string>#!/bin/bash
 exit 0</string>
@@ -35,13 +41,19 @@ exit 0</string>
             <key>unattended_install</key>
             <true/>
             <key>category</key>
-			<string>Security</string>
+            <string>%MUNKI_CATEGORY%</string>
 			<key>developer</key>
 			<string>Orchard &#038; Grove</string>
 			<key>preinstall_script</key>
 			<string>%PREINSTALL%</string>
 			<key>postinstall_script</key>
 			<string>%POSTINSTALL%</string>
+			<key>preuninstall_script</key>
+            <string>#!/bin/bash
+/usr/local/bin/authchanger -reset
+            </string>
+            <key>unattended_install</key>
+            <true/>
         </dict>
     </dict>
     <key>MinimumVersion</key>

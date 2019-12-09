@@ -4,6 +4,12 @@
     <dict>
         <key>Description</key>
         <string>Downloads the latest version of NoMAD Login AD</string>
+        
+        This recipe differs from the ones in bochoven-recipes in the following ways:
+		- This one performs code signature verification.
+		- This one acquires just the latest version NoMAD Login AD pkg.
+        - This one acquires adds check phase
+        
         <key>Identifier</key>
         <string>com.github.peetinc.download.NoMADLoginAD</string>
         <key>Input</key>
