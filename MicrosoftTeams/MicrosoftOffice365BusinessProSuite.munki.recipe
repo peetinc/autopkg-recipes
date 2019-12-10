@@ -13,7 +13,7 @@
         <key>NAME</key>
         <string>MicrosoftOffice365BusinessProSuite</string>
         <key>DISPLAY_NAME</key>
-        <string>Microsof tOffice 365 Business Pro</string>
+        <string>Microsoft Office Pro</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Microsoft/O365</string>
         <key>CATEGORY</key>
