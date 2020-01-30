@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads waderobson/s3-auth</string>   
+    <key>Identifier</key>
+    <string>com.github.peetinc.pkg.s3-auth</string> 
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>s3-auth</string>
+        <key>VERSION_URL</key>
+		<string>https://raw.githubusercontent.com/waderobson/s3-auth/master/build.sh</string>
+		<key>SEARCH_PATTERN_VERSION</key>
+		<string>(?&lt;=VERSION=).*</string> 
+    </dict>
+    <key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.peetinc.download.s3-auth</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN_VERSION%</string>
+				<key>url</key>
+				<string>%VERSION_URL%</string>
+				<key>result_output_var_name</key>
+				<string>VERSION</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+	</array>    
+</dict>
+</plist>

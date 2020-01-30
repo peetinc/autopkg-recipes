@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads waderobson/s3-auth</string>   
+    <key>Identifier</key>
+    <string>com.github.peetinc.download.s3-auth</string> 
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>s3-auth</string>
+        
+    </dict>
+    <key>MinimumVersion</key>
+    <string>1.0.0</string>
+    <key>Process</key>
+    <array>
+    	<dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://github.com/waderobson/s3-auth/archive/master.zip</string>
+				<key>curl_opts</key>
+				<array>
+					<string>--location</string>
+				</array>
+				<key>filename</key>
+				<string>%NAME%.zip</string>
+        	</dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+				<key>Arguments</key>
+				<dict>
+					<key>archive_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				</dict>
+			</dict>
+    </array>
+</dict>
+</plist>
