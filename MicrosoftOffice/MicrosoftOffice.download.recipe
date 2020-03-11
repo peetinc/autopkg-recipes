@@ -5,19 +5,19 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Microsoft Office Suite.</string>
+	<string>Downloads the latest version of Microsoft Office YEAR.</string>
 	<key>Identifier</key>
 	<string>com.github.peetinc.download.MicrosoftOffice</string>
 	<key>Input</key>
 	<dict>
 		<key>LINKID</key>
 		<string>871743</string>
-		<key>SUITE</key>
+		<key>YEAR</key>
 		<string>2016</string>		
 		<key>DOWNLOAD_URL</key>
 		<string>https://go.microsoft.com/fwlink/?linkid=%LINKID%</string>
 		<key>NAME</key>
-		<string>MicrosoftOffice%SUITE%</string>
+		<string>MicrosoftOffice%YEAR%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>

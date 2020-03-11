@@ -50,7 +50,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peetinc.download.MicrosoftRemoteDesktop</string>
+	<string>com.github.peetinc.download.MicrosoftOffice</string>
 	<key>Process</key>
 	<array>
 		<dict>
