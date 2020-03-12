@@ -34,7 +34,7 @@
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
 			<key>prefetch_filename</key>
-			</true>
+			<true/>
 			<key>Processor</key>
 			<string>CURLDownloader</string>
 		</dict>
