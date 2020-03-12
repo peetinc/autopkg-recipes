@@ -62,6 +62,26 @@
 			<dict>
 				<key>pkg_path</key>
 				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiInfoCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>source</key>
+				<string>%pathname%</string>
+				<key>target</key>
+				<string>RECIPE_CACHE_DIR/downloads/MicrosoftOffice%YEAR%Installer.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileMover</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>RECIPE_CACHE_DIR/downloads/MicrosoftOffice%YEAR%Installer.pkg</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
