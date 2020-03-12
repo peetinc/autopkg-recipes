@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Office 2016 MIN_OS_VER 10.10.0 - Office 2019 MIN_OS_VER 10.13.6</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Microsoft Office Suite and imports it into Munki.</string>
 	<key>Identifier</key>
@@ -16,6 +16,8 @@
 		<string>MicrosoftOffice%YEAR%</string>
 		<key>CATEGORY</key>
 		<string>Productivity</string>
+		<key>MIN_OS_VER</key>
+		<string>10.10.0</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -43,6 +45,8 @@
 			<string>%NAME%</string>
 			<key>category</key>
 			<string>%CATEGORY%</string>
+			<key>minimum_os_version</key>
+			<string>%MIN_OS_VER%</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
