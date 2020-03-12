@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Office 2016 LINKID 871743 - Office 2019 LINKID 525133</string>
+	<string>Office 2016 LINKID 871743 - Office 2019 LINKID 525133 </string>
+	<key>Comment</key>
 	<string>Downloads the latest version of Microsoft Office YEAR.</string>
 	<key>Identifier</key>
 	<string>com.github.peetinc.download.MicrosoftOffice</string>
