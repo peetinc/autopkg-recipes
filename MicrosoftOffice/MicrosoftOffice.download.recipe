@@ -18,6 +18,8 @@
 		<string>https://go.microsoft.com/fwlink/?linkid=%LINKID%</string>
 		<key>NAME</key>
 		<string>MicrosoftOffice%YEAR%</string>
+		<key>PKG_NAME</key>
+		<string>MicrosoftOffice%YEAR%Installer.pkg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -29,13 +31,15 @@
 				<key>CHECK_FILESIZE_ONLY</key>
 				<true/>
 				<key>prefetch_filename</key>
-				<true/>
+				<false/>
 				<key>curl_opts</key>
 				<array>
 				<string>--remote-header-name</string>
 				</array>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
+				<key>filename</key>
+				<string>%PKG_NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>CURLDownloader</string>
