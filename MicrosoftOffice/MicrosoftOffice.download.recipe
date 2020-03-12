@@ -1,4 +1,4 @@
-<><?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -26,14 +26,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>prefetch_filename</key>
+				<true/>
 				<key>curl_opts</key>
 				<array>
-					<string>--remote-header-name</string>
+				<string>--remote-header-name</string>
 				</array>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
-				<key>prefetch_filename</key>
-				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>CURLDownloader</string>
