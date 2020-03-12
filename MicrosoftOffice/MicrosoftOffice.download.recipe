@@ -28,13 +28,13 @@
 			<dict>
 				<key>curl_opts</key>
 				<array>
-				<string>--remote-header-name</string>
+					<string>--remote-header-name</string>
 				</array>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
+				<key>prefetch_filename</key>
+				<true/>
 			</dict>
-			<key>prefetch_filename</key>
-			<true/>
 			<key>Processor</key>
 			<string>CURLDownloader</string>
 		</dict>
