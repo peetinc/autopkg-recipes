@@ -26,8 +26,10 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.pkg</string>
+				<key>curl_opts</key>
+				<array>
+				<string>--remote-header-name</string>
+				</array>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
