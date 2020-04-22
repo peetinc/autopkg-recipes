@@ -15,7 +15,7 @@
 		<key>NAME</key>
 		<string>SyncroAgent</string>
 		<key>VERSION</key>
-		<string>%SHORT_VERSION%.%BUILD%</string>
+		<string>1.0.0.68</string>
 		<key>CATEGORY</key>
 		<string>SysAdmin</string>
 		<key>pkginfo</key>
