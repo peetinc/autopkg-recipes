@@ -45,13 +45,11 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+				<key>app_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/SyncroAgent.app</string>
 			</dict>
 			<key>Processor</key>
-			<string>DmgCreator</string>
+			<string>AppPkgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -75,8 +73,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 				<key>version_comparison_key</key>
