@@ -14,6 +14,8 @@
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>SyncroAgent</string>
+		<key>CATEGORY</key>
+		<string>SysAdmin</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,9 +23,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>SyncroMSP Agent</string>
 			<key>developer</key>
-			<string>Jed Tiotuico</string>
+			<string>SyncroMSP</string>
+			<key>category</key>
+			<string>%CATEGORY%</string>
 			<key>display_name</key>
 			<string>SyncroAgent</string>
 			<key>name</key>
