@@ -39,20 +39,9 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peetinc.download.SyncroAgent</string>
+	<string>com.github.peetinc.pkg.SyncroAgent</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/SyncroAgent.app</string>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>			
-			</dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
