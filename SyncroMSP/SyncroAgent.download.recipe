@@ -64,7 +64,7 @@
 				<key>input_plist_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/SyncroAgent.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
+				<string>CFBundleVersion</string>
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
@@ -76,10 +76,6 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%/SyncroAgent.app/Contents/Info.plist</string>
                 <key>plist_keys</key>
                 <dict>
-                    <key>CFBundleShortVersionString</key>
-                    <string>short_version</string>
-                    <key>CFBundleVersion</key>
-                    <string>build</string>
                     <key>LSMinimumSystemVersion</key>
                     <string>min_os_vers</string>
                 </dict>
