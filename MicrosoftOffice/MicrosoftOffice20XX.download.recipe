@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
-	<key>Description</key>
+	<string>Office 2016 LINKID 871743 - Office 2019 LINKID 525133 </string>
+	<key>Comment</key>
 	<string>Downloads the latest version of Microsoft Office YEAR.</string>
 	<key>Identifier</key>
 	<string>com.github.peetinc.download.MicrosoftOffice</string>
 	<key>Input</key>
 	<dict>
 		<key>LINKID</key>
-		<string>871743</string>
+		<string>525133</string>
 		<key>YEAR</key>
-		<string>2016</string>		
+		<string>2019</string>		
 		<key>DOWNLOAD_URL</key>
 		<string>https://go.microsoft.com/fwlink/?linkid=%LINKID%</string>
 		<key>NAME</key>
@@ -26,13 +26,19 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.pkg</string>
+				<key>CHECK_FILESIZE_ONLY</key>
+				<true/>
+				<key>prefetch_filename</key>
+				<true/>
+				<key>curl_opts</key>
+				<array>
+				<string>--remote-header-name</string>
+				</array>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
 			<key>Processor</key>
-			<string>URLDownloader</string>
+			<string>CURLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
