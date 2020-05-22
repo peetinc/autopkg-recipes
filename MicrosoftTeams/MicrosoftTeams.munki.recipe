@@ -48,20 +48,20 @@
     <string>com.github.peetinc.download.MicrosoftTeams</string>
     <key>Process</key>
         <array>
-		<dict>
-	    <key>Arguments</key>
-  	      <dict>
-  	      	<key>purge_destination</key>
-			<true/>
-  	          <key>pkg_payload_path</key>
-  	          <string>%pathname%</string>
-  	          <key>destination_path</key>
-  	          <string>%RECIPE_CACHE_DIR%/tmp/payload/Applications/</string>
-  	       </dict>
-  	       <key>Processor</key>
-  	       <string>PkgPayloadUnpacker</string>
-  	  	</dict>
-		<dict>
+			<dict>
+	    	<key>Arguments</key>
+  	    	  <dict>
+					<key>purge_destination</key>
+					<true/>
+					<key>pkg_payload_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/tmp/payload/Applications/</string>
+  	    	   </dict>
+  	    	   <key>Processor</key>
+  	    	   <string>PkgPayloadUnpacker</string>
+  	  		</dict>
+			<dict>
   	  	<key>Arguments</key>
   	      	<dict>
   	          	<key>faux_root</key>
