@@ -34,8 +34,6 @@
 			<string>%NAME%</string>
 			<key>category</key>
 			<string>%CATEGORY%</string>
-			<key>minimum_os_version</key>
-			<string>%MIN_OS_VER%</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
