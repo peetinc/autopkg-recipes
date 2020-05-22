@@ -48,7 +48,19 @@
     <string>com.github.peetinc.download.MicrosoftTeams</string>
     <key>Process</key>
         <array>
-			<dict>
+					<dict>
+	        <key>Arguments</key>
+	        <dict>
+	        	<key>purge_destination</key>
+				<true/>
+	            <key>flat_pkg_path</key>
+	            <string>%pathname%</string>
+	            <key>destination_path</key>
+	            <string>%RECIPE_CACHE_DIR%/tmp/PKGs</string>
+	        </dict>
+	    	<key>Processor</key>
+	        <string>FlatPkgUnpacker</string>
+				<dict>
 	    	<key>Arguments</key>
   	    	  <dict>
 					<key>purge_destination</key>
