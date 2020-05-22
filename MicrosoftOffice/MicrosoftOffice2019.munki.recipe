@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Office 2016 MIN_OS_VER 10.10.0 - Office 2019 MIN_OS_VER 10.13.6</string>
+	<string>Office 2019 MIN_OS_VER 10.13.6</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Microsoft Office Suite and imports it into Munki.</string>
 	<key>Identifier</key>
@@ -17,7 +17,7 @@
 		<key>CATEGORY</key>
 		<string>Productivity</string>
 		<key>MIN_OS_VER</key>
-		<string>10.13.6</string>
+		<string>10.13.0</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -54,7 +54,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peetinc.download.MicrosoftOffice</string>
+	<string>com.github.peetinc.download.MicrosoftOffice2019</string>
 	<key>Process</key>
 	<array>
 		<dict>
