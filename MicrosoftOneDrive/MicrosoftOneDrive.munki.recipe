@@ -81,7 +81,7 @@
   	          	<string>%RECIPE_CACHE_DIR%/tmp/payload</string>
   	          	<key>installs_item_paths</key>
   	          	<array>
-  	      			<string>/Applications/Microsoft Teams.app</string>
+  	      			<string>/Applications/OneDrive.app</string>
   	          	</array>
   	      	</dict>
   	      <key>Processor</key>
