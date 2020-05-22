@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Office 2016 MIN_OS_VER 10.10.0 - Office 2019 MIN_OS_VER 10.13.6</string>
+	<string>Microsoft Remote Desktop MIN_OS_VER 10.12</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Microsoft Office Suite and imports it into Munki.</string>
+	<string>Downloads the latest version of Microsoft Remote Desktop and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.peetinc.munki.MicrosoftRemoteDesktop</string>
 	<key>Input</key>
@@ -16,8 +16,6 @@
 		<string>MicrosoftRemoteDesktop</string>
 		<key>CATEGORY</key>
 		<string>Remote Access</string>
-		<key>MIN_OS_VER</key>
-		<string>10.12.0</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
