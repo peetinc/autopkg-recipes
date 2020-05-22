@@ -17,7 +17,9 @@
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Microsoft/Teams</string>
         <key>CATEGORY</key>
-		<string>Productivity</string>
+		<string>Communication</string>
+		<key>MIN_OS</key>
+		<string>10.11.0</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -25,7 +27,7 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Microsoft Teams is cloud-based team collaboration software that is part of the Office 365 suite of applications. The core capabilities in Microsoft Teams include business messaging, calling, video meetings and file sharing.</string>
+            <string><html>Microsoft Teams is cloud-based team collaboration software that is part of the Office 365 suite of applications. The core capabilities in Microsoft Teams include business messaging, calling, video meetings and file sharing.</string>
             <key>display_name</key>
             <string>%DISPLAY_NAME%</string>
             <key>name</key>
@@ -34,6 +36,8 @@
             <true/>
             <key>category</key>
 			<string>%CATEGORY%</string>
+			<key>minimum_os_version</key>
+			<string>%MIN_OS%</string>
 			<key>developer</key>
 			<string>Micrsoft</string>
         </dict>
@@ -41,9 +45,40 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.rtrouton.download.microsoftteams</string>
+    <string>com.github.peetinc.download.MicrosoftTeams</string>
     <key>Process</key>
         <array>
+		<dict>
+	    <key>Arguments</key>
+  	      <dict>
+  	      	<key>purge_destination</key>
+			<true/>
+  	          <key>pkg_payload_path</key>
+  	          <string>%pathname%</string>
+  	          <key>destination_path</key>
+  	          <string>%RECIPE_CACHE_DIR%/tmp/payload/Applications/</string>
+  	       </dict>
+  	       <key>Processor</key>
+  	       <string>PkgPayloadUnpacker</string>
+  	  </dict>
+	<dict>
+  	  	<key>Arguments</key>
+  	      	<dict>
+  	          	<key>faux_root</key>
+  	          	<string>%RECIPE_CACHE_DIR%/tmp/payload</string>
+  	          	<key>installs_item_paths</key>
+  	          		<array>
+  	                 		<string>/Applications/Microsoft Teams.app</string>
+  	             		</array>
+  	          </dict>
+  	      <key>Processor</key>
+  	      <string>MunkiInstallsItemsCreator</string>
+  	  </dict>
+  	  <dict>
+  	  	<key>Processor</key>
+  	      <string>MunkiPkginfoMerger</string>
+			</dict>
+		<dict>
         <dict>
             <key>Arguments</key>
             <dict>
