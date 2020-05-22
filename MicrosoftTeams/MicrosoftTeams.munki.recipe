@@ -48,7 +48,7 @@
     <string>com.github.peetinc.download.MicrosoftTeams</string>
     <key>Process</key>
         <array>
-					<dict>
+			<dict>
 	        <key>Arguments</key>
 	        <dict>
 	        	<key>purge_destination</key>
@@ -60,7 +60,8 @@
 	        </dict>
 	    	<key>Processor</key>
 	        <string>FlatPkgUnpacker</string>
-				<dict>
+			</dict>
+			<dict>
 	    	<key>Arguments</key>
   	    	  <dict>
 					<key>purge_destination</key>
