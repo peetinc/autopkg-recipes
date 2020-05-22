@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Microsoft Microsoft TeamMIN_OS_VER 10.11</string>
     <key>Description</key>
     <string>Downloads Microsoft Teams and imports into munki.</string>
-
     <key>Identifier</key>
     <string>com.github.peetinc.munki.MicrosoftTeams</string>
-
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -27,7 +27,7 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string><html>Microsoft Teams is cloud-based team collaboration software that is part of the Office 365 suite of applications. The core capabilities in Microsoft Teams include business messaging, calling, video meetings and file sharing.</string>
+            <string>Microsoft Teams is cloud-based team collaboration software that is part of the Office 365 suite of applications. The core capabilities in Microsoft Teams include business messaging, calling, video meetings and file sharing.</string>
             <key>display_name</key>
             <string>%DISPLAY_NAME%</string>
             <key>name</key>
