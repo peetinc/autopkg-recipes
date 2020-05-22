@@ -49,6 +49,8 @@
 		<dict>
         <key>Arguments</key>
         <dict>
+        	<key>purge_destination</key>
+			<true/>
             <key>flat_pkg_path</key>
             <string>%pathname%</string>
             <key>destination_path</key>
@@ -60,6 +62,8 @@
 	<dict>
 	    <key>Arguments</key>
         <dict>
+        	<key>purge_destination</key>
+			<true/>
             <key>pkg_payload_path</key>
             <string>%RECIPE_CACHE_DIR%/tmp/PKGs/com.microsoft.rdc.macos.pkg/Payload</string>
             <key>destination_path</key>
