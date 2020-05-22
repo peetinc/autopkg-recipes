@@ -90,7 +90,7 @@
   	          	<string>%RECIPE_CACHE_DIR%/tmp/payload</string>
   	          	<key>installs_item_paths</key>
   	          	<array>
-  	      			<string>/Applications/OneDrive.app</string>
+  	      			<string>/Applications/Microsoft Edge.app</string>
   	          	</array>
   	      	</dict>
   	      <key>Processor</key>
