@@ -90,15 +90,13 @@
 	<dict>
 	 <key>Arguments</key>
         <dict>
-            <key>source_path</key>
+            <key>source</key>
             <string>%pathname%</string>
-            <key>destination_path</key>
+            <key>target</key>
             <string>%RECIPE_CACHE_DIR%/downloads/MicrosoftRemoteDesktop.pkg</string>
-            <key>overwrite</key>
-            <true/>
         </dict>
     	<key>Processor</key>
-        <string>Copier</string>
+        <string>FileMover</string>
     </dict>
 	<dict>
 		<key>Arguments</key>
