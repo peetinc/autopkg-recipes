@@ -18,6 +18,8 @@
 		<string>Productivity</string>
 		<key>MIN_OS_VER</key>
 		<string>10.13.0</string>
+		<key>MAX_OS_VER</key>
+		<string>10.20.99</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -47,6 +49,8 @@
 			<string>%CATEGORY%</string>
 			<key>minimum_os_version</key>
 			<string>%MIN_OS_VER%</string>
+			<key>maximum_os_version</key>
+			<string>%MAX_OS_VER%</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
