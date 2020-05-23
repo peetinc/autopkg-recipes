@@ -39,7 +39,7 @@
 			<key>minimum_os_version</key>
 			<string>%MIN_OS%</string>
 			<key>developer</key>
-			<string>Micrsoft</string>
+			<string>Microsoft</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
