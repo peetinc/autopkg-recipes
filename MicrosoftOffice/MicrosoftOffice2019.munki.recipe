@@ -74,9 +74,9 @@
 							<key>CFBundleName</key>
 							<string>Excel</string>
 							<key>CFBundleShortVersionString</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>CFBundleVersion</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>minosversion</key>
 							<string>10.13</string>
 							<key>path</key>
@@ -92,9 +92,9 @@
 							<key>CFBundleName</key>
 							<string>Outlook</string>
 							<key>CFBundleShortVersionString</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>CFBundleVersion</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>minosversion</key>
 							<string>10.13</string>
 							<key>path</key>
@@ -110,9 +110,9 @@
 							<key>CFBundleName</key>
 							<string>PowerPoint</string>
 							<key>CFBundleShortVersionString</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>CFBundleVersion</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>minosversion</key>
 							<string>10.13</string>
 							<key>path</key>
@@ -128,9 +128,9 @@
 							<key>CFBundleName</key>
 							<string>Word</string>
 							<key>CFBundleShortVersionString</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>CFBundleVersion</key>
-							<string>15.99</string>
+							<string>16.16.99</string>
 							<key>minosversion</key>
 							<string>10.13</string>
 							<key>path</key>
