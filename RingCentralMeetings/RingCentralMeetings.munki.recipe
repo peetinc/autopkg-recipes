@@ -26,6 +26,8 @@
 			</array>
 			<key>description</key>
 			<string> </string>
+			<key>category</key>
+			<string>Communication</string>
 			<key>developer</key>
 			<string>RingCentral, Inc.</string>
 			<key>display_name</key>
