@@ -25,7 +25,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Online videoconferencing app for RingCentral.</string>
 			<key>category</key>
 			<string>Communication</string>
 			<key>developer</key>
