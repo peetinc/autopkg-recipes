@@ -71,6 +71,8 @@
 			<dict>
 				<key>source_pkg</key>
 				<string>%pathname%</string>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/RingCentralMeetings.pkg</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
