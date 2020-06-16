@@ -22,8 +22,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Applications</key>
