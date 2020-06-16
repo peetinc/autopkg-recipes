@@ -34,8 +34,6 @@
 			<string>RingCentral Meetings</string>
 			<key>name</key>
 			<string>%NAME%</string>
-			<key>version</key>
-			<string>%version%</string>
 			<key>unattended_install</key>
 			<true/>
 			
@@ -68,7 +66,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pathname%</string>
+				<string>%RECIPE_CACHE_DIR%/RingCentralMeetings-%version%.pkg</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
