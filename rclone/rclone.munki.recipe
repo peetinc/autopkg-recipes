@@ -25,7 +25,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>%release_notes%</string>
+			<string>Rclone - rsync for cloud storage. Sync files to and from many cloud storage providers.</string>
 			<key>developer</key>
 			<string>%DEVELOPER%</string>
 			<key>catagory</key>
