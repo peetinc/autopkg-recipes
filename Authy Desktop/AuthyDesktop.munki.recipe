@@ -11,9 +11,9 @@
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/AuthyInc/%NAME%</string>
 		<key>NAME</key>
-		<string>Authy Desktop</string>
+		<string>AuthyDesktop</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -22,6 +22,8 @@
 			</array>
 			<key>description</key>
 			<string>Authy is a simple way to manage two-factor authentication accounts. Authy supports Gmail, Dropbox, LastPass and thousands of other sites.</string>
+			<key>category</key>
+			<string>Security</string>
 			<key>developer</key>
 			<string>Authy Inc.</string>
 			<key>display_name</key>
