@@ -5,7 +5,7 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Authy Desktop and imports it into Munki.</string>
+	<string>Downloads the latest version of AuthyDesktop and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.peetinc.munki.AuthyDesktop</string>
 	<key>Input</key>
@@ -22,12 +22,12 @@
 			</array>
 			<key>description</key>
 			<string>Authy is a simple way to manage two-factor authentication accounts. Authy supports Gmail, Dropbox, LastPass and thousands of other sites.</string>
-			<key>category</key>
-			<string>Security</string>
 			<key>developer</key>
 			<string>Authy Inc.</string>
 			<key>display_name</key>
 			<string>Authy Desktop</string>
+			<key>category</key>
+			<string>Security</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
