@@ -6,7 +6,7 @@
     <string>Downloads Kerio Control VPN Client</string>
     
     <key>Identifier</key>
-    <string>com.github.peetinc.download.kerio-control-vpn</string>
+    <string>com.github.peetinc.download.KerioControlVPN</string>
     
     <key>Input</key>
     <dict>

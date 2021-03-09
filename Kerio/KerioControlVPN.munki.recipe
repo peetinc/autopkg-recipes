@@ -6,7 +6,7 @@
         <string>Imports Kerio Control VPN Client </string>
 
         <key>Identifier</key>
-        <string>com.github.tbridge.munki.kerio-control-vpn</string>
+        <string>com.github.peetinc.munki.KerioControlVPN</string>
 
         <key>Input</key>
         <dict>
