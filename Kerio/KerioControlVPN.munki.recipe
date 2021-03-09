@@ -78,8 +78,6 @@
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
             <dict>
-                <key>Processor</key>
-                <string>PathDeleter</string>
                 <key>Arguments</key>
                 <dict>
                     <key>path_list</key>
@@ -87,14 +85,17 @@
                         <string>%RECIPE_CACHE_DIR%/root</string>
                     </array>
                 </dict>
-                <dict>
-                    <key>Processor</key>
-                    <string>MunkiPkginfoMerger</string>
-                </dict>
-                <dict>
-                    <key>Processor</key>
-                    <string>MunkiImporter</string>
-                </dict>
-            </array>
-        </dict>
-    </plist>
+                <key>Processor</key>
+                <string>PathDeleter</string>
+            </dict>
+            <dict>
+                <key>Processor</key>
+                <string>MunkiPkginfoMerger</string>
+            </dict>
+            <dict>
+                <key>Processor</key>
+                <string>MunkiImporter</string>
+            </dict>
+        </array>
+    </dict>
+</plist>
