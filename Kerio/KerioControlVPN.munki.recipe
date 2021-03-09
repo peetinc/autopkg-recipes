@@ -64,9 +64,9 @@
                     <key>version_comparison_key</key>
                     <string>CFBundleVersion</string>
                     <key>installs_item_paths</key>
-                    <dict>
+                    <array>
                         <string>/usr/local/kerio/vpnclient/KVpnClientAgent.app</string>
-                    </dict>
+                    </array>
                 </dict>
                 <key>Processor</key>
                 <string>MunkiInstallsItemsCreator</string>
