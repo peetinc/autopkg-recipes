@@ -41,7 +41,7 @@
         <key>MinimumVersion</key>
         <string>0.4.0</string>
         <key>ParentRecipe</key>
-        <string>com.github.peetinc.download.KerioControlVPN</string>ß
+        <string>com.github.peetinc.download.KerioControlVPN</string>
         <key>Process</key>
         <array>
             <dict>
