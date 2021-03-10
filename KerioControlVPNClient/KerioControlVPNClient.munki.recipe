@@ -32,6 +32,10 @@
                 <string>%DEVELOPER%</string>
                 <key>category</key>
                 <string>%CATEGORY%</string>
+                <key>supported_architectures</key>
+				<array>
+					<string>i386</string>
+				</array>
                 <key>unattended_install</key>
                 <true/>
             </dict>
@@ -59,8 +63,6 @@
                 <dict>
                     <key>faux_root</key>
                     <string>%RECIPE_CACHE_DIR%/root</string>
-                    <key>version_comparison_key</key>
-                    <string>CFBundleVersion</string>
                     <key>installs_item_paths</key>
                     <array>
                         <string>/usr/local/kerio/vpnclient/KVpnClientAgent.app</string>
