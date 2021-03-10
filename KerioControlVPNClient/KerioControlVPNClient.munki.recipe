@@ -6,12 +6,12 @@
         <string>Imports Kerio Control VPN Client </string>
 
         <key>Identifier</key>
-        <string>com.github.peetinc.munki.KerioControlVPN</string>
+        <string>com.github.peetinc.munki.KerioControlVPNClient</string>
 
         <key>Input</key>
         <dict>
             <key>NAME</key>
-            <string>KerioControlVPN</string>
+            <string>KerioControlVPNClient</string>
             <key>MUNKI_REPO_SUBDIR</key>
             <string>apps/Kerio</string>
             <key>DEVELOPER</key>
@@ -41,7 +41,7 @@
         <key>MinimumVersion</key>
         <string>0.4.0</string>
         <key>ParentRecipe</key>
-        <string>com.github.peetinc.download.KerioControlVPN</string>
+        <string>com.github.peetinc.download.KerioControlVPNClient</string>
         <key>Process</key>
         <array>
             <dict>
