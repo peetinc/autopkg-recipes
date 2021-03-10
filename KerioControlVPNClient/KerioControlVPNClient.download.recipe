@@ -60,9 +60,9 @@
         <dict>
     		 <key>Arguments</key>
             <dict>
-                <key>flat_pkg_path</key>
+                <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/expand/Kerio_Conntrol_VPN_Client.pkg/Payload</string>
-                <key>flat_pkg_path</key>
+                <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root</string>
             </dict>
             <key>Processor</key>
