@@ -39,7 +39,7 @@
             </dict>
         </dict>
         <key>MinimumVersion</key>
-        <string>0.4.0</string>
+        <string>1.0.0</string>
         <key>ParentRecipe</key>
         <string>com.github.peetinc.download.KerioControlVPNClient</string>
         <key>Process</key>
@@ -78,6 +78,10 @@
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
             <dict>
+                <key>Processor</key>
+                <string>MunkiPkginfoMerger</string>
+            </dict>
+            <dict>
                 <key>Arguments</key>
                 <dict>
                     <key>path_list</key>
@@ -87,10 +91,6 @@
                 </dict>
                 <key>Processor</key>
                 <string>PathDeleter</string>
-            </dict>
-            <dict>
-                <key>Processor</key>
-                <string>MunkiPkginfoMerger</string>
             </dict>
             <dict>
                 <key>Processor</key>
