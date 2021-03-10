@@ -32,9 +32,11 @@
                 <string>%DEVELOPER%</string>
                 <key>category</key>
                 <string>%CATEGORY%</string>
+				<key>minimum_os_version</key>
+				<string>10.8.0</string>
                 <key>supported_architectures</key>
 				<array>
-					<string>i386</string>
+					<string>x86_64</string>
 				</array>
                 <key>unattended_install</key>
                 <true/>
