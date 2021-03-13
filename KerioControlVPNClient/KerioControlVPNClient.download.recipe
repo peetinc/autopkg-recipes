@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads Kerio Control VPN Client</string>   
+    <string>Downloads Kerio Control VPN Client</string>
+    
     <key>Identifier</key>
-    <string>com.github.peetinc.download.KerioControlVPNClient</string> 
+    <string>com.github.peetinc.download.KerioControlVPNClient</string>
+    
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -13,43 +15,68 @@
         
     </dict>
     <key>MinimumVersion</key>
-    <string>0.4.0</string>
+    <string>1.0.0</string>
     <key>Process</key>
     <array>
     	<dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://download.kerio.com/dwn/kerio-control-vpnclient-mac.dmg</string>
-				<key>curl_opts</key>
-				<array>
-					<string>--location</string>
-				</array>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-        	</dict>
+                             <string>http://download.kerio.com/dwn/kerio-control-vpnclient-mac.dmg</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
         </dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
         <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
                 <string>%pathname%/Kerio Control VPN Client Installer.pkg</string>
+                <key>expected_authority_names</key>
+        			<array>
+            			<string>Developer ID Installer: GFI Software Development Ltd (ESPPW8V28N)</string>
+            			<string>Developer ID Certification Authority</string>
+            			<string>Apple Root CA</string>
+        			</array>
         	</dict>
-        	<key>expected_authority_names</key>
-        	<array>
-         		<string>Developer ID Installer: Kerio Technologies (7WC9K73933)</string>
-    			<string>Developer ID Certification Authority</string>
-       			<string>Apple Root CA</string>
-       		</array>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
     	</dict>
+    	<dict>
+    		 <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%pathname%/Kerio Control VPN Client Installer.pkg</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/expand</string>
+            </dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+        </dict>
+        <dict>
+    		 <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/expand/Kerio_Conntrol_VPN_Client.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/root</string>
+            </dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+        </dict>
+        <dict>
+		    <key>Arguments</key>
+		    <dict>
+		        <key>input_plist_path</key>
+		        <string>%RECIPE_CACHE_DIR%/root/usr/local/kerio/vpnclient/KVpnClientAgent.app/Contents/Info.plist</string>
+		    </dict>
+            <key>Processor</key>
+		    <string>Versioner</string>
+		</dict>
     </array>
 </dict>
 </plist>
