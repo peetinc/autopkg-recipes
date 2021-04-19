@@ -1,6 +1,6 @@
 # autopkg-recipes
 
-This si a messy scratch space for me to work on recipes. Please don't "autopkg repo-add" this repo. And for the love of god if you do, use overrides.
+This is a messy scratch space for me to work on recipes. Please don't "autopkg repo-add" this repo. And for the love of god if you do, use overrides.
 
 I'm putting stable recipes over here: https://github.com/peetinc/peetinc-recipes
 
