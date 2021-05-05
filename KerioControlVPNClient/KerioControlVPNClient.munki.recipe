@@ -11,6 +11,8 @@
 	<string>com.github.peetinc.munki.KerioControlVPNClient</string>
 	<key>Input</key>
 	<dict>
+		<key>ARCH</key>
+		<string>x86_64</string>
 		<key>CATEGORY</key>
 		<string>Security</string>
 		<key>DEVELOPER</key>
@@ -39,7 +41,7 @@
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
 			<array>
-				<string>x86_64</string>
+				<string>%ARCH%</string>
 			</array>
 			<key>blocking_applications</key>
 			<array/>
