@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Comment</key>
+    <string>The two url's are:
+    	https://cdn.kerio.com/dwn/kerio-control-vpnclient-mac.dmg
+    	https://cdn.kerio.com/dwn/kerio-control-vpnclient-mac-apple-silicon.dmg
+    	</string>
+    
     <key>Description</key>
     <string>Downloads Kerio Control VPN Client</string>
     
@@ -12,7 +18,8 @@
     <dict>
         <key>NAME</key>
         <string>KerioControlVPNClient</string>
-        
+        <key>DOWNLOAD_URL</key>
+        <string>https://cdn.kerio.com/dwn/kerio-control-vpnclient-mac.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
@@ -22,7 +29,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                             <string>http://download.kerio.com/dwn/kerio-control-vpnclient-mac.dmg</string>
+                             <string>%DOWNLOAD_URL%</string>
             </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
