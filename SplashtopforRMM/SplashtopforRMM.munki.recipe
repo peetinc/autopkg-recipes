@@ -10,6 +10,8 @@
 	<string>com.github.peetinc.munki.SplashtopforRMM</string>
 	<key>Input</key>
 	<dict>
+		<key>CATEGORY</key>
+		<string>Remote Access</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
@@ -19,8 +21,9 @@
 			<key>blocking_applications</key>
 			<array>
 				<string>Splashtop for RMM.app</string>
-				<string>printPreivew.app</string>
 			</array>
+			<key>category</key
+			<string>%CATEGORY%</string>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
