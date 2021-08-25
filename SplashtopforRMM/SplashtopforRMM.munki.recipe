@@ -21,6 +21,7 @@
 			<key>blocking_applications</key>
 			<array>
 				<string>Splashtop for RMM.app</string>
+				<string>printPreivew.app</string>
 			</array>
 			<key>category</key
 			<string>%CATEGORY%</string>
