@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Splashtop for RMM</string>
+		<string>SplashtopforRMM</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
