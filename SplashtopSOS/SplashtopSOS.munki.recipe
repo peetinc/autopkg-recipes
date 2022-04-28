@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Splashtop SOS</string>
+		<string>SplashtopSOS</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,7 +21,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Download and run the SOS app to give your IT Admin remote access to this computer.</string>
 			<key>developer</key>
 			<string>Splashtop</string>
 			<key>display_name</key>
@@ -30,6 +30,8 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>unattended_uninstall</key>
+            <true/>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
