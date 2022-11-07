@@ -20,7 +20,7 @@
 		<string>rclone</string>
 		<key>DEVELOPER</key>
 		<string>Nick Craig-Wood</string>
-		<key>CATAGORY</key>
+		<key>CATEGORY</key>
 		<string>Utilities</string>
 		<key>pkginfo</key>
 		<dict>		
@@ -28,6 +28,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%CATEGORY%</string>
 			<key>description</key>
 			<string>Rclone, like rsync for cloud storage. Sync files to and from many cloud storage providers.</string>
 			<key>developer</key>
@@ -40,7 +42,7 @@
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
 			<array>
-				<string>arm64</string>
+				<string>%ARCHITECTURE%</string>
 			</array>
 			<key>unattended_install</key>
 			<true/>
