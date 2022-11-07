@@ -10,6 +10,10 @@
 	<string>com.github.peetinc.munki.rclone</string>
 	<key>Input</key>
 	<dict>
+		<key>ARCHITECTURE</key>
+		<string>x86_64 OR arm64</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://downloads.rclone.org/rclone-current-osx-amd64.zip OR https://downloads.rclone.org/rclone-current-osx-arm64.zip</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/rclone</string>
 		<key>NAME</key>
@@ -19,7 +23,7 @@
 		<key>CATAGORY</key>
 		<string>Utilities</string>
 		<key>pkginfo</key>
-		<dict>
+		<dict>		
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
@@ -34,6 +38,10 @@
 			<string>rclone</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
