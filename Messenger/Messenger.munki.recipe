@@ -10,6 +10,8 @@
 	<string>com.github.peetinc.munki.Messenger</string>
 	<key>Input</key>
 	<dict>
+		<key>CATEGORY</key>
+		<string>Communication</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
@@ -20,8 +22,10 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%CATEGORY%</string>
 			<key>description</key>
-			<string> </string>
+			<string>Facebook Messenger makes it easy to access Facebook's messaging platform on macOS. </string>
 			<key>developer</key>
 			<string>Facebook, Inc.</string>
 			<key>display_name</key>
