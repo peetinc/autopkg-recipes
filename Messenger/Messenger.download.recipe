@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>appcast_url</key>
-				<string>https://ac-public.s3.us-west-1.wasabisys.com/update.xml</string>
+				<string>https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&platform=mac</string>
 			</dict>
 			<key>Processor</key>
 			<string>SparkleUpdateInfoProvider</string>
