@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>appcast_url</key>
-				<string>"https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&platform=mac"</string>
+				<string>https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&amp;platform=mac</string>
 				<key>curl_opts</key>
 				<array>
 					<string>-L</string>
