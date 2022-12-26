@@ -10,10 +10,12 @@
 	<string>com.github.peetinc.munki.MendeleyReferenceManager</string>
 	<key>Input</key>
 	<dict>
+		<key>DISPLAY_NAME</key>
+		<string>Mendeley Reference Manager</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Mendeley Reference Manager</string>
+		<string>MendeleyReferenceManager</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -25,7 +27,7 @@
 			<key>developer</key>
 			<string>Elsevier Inc.</string>
 			<key>display_name</key>
-			<string>Mendeley Reference Manager</string>
+			<string>%DISPLAY_NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
