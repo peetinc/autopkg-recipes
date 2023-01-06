@@ -20,6 +20,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>description</key>
 			<string>Hot is macOS menu bar application that displays the CPU speed limit due to thermal issues.</string>
 			<key>developer</key>
