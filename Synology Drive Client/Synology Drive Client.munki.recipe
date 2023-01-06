@@ -25,7 +25,7 @@
 				<string>testing</string>
 			</array>
 			<key>category</key>
-			<string>Productivity</string>
+			<string>Synology</string>
 			<key>description</key>
 			<string>Provides file syncing and personal computer backup services on multiple client computers to a centralized server, Synology Drive Server.</string>
 			<key>developer</key>
