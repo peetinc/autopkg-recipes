@@ -10,18 +10,22 @@
 	<string>com.github.peetinc.munki.ElevateUC</string>
 	<key>Input</key>
 	<dict>
+		<key>CATEGORY</key>
+		<string>Communication</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Elevate UC</string>
+		<string>ElevateUC</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>category</key>
+			<string>%CATEGORY%</string>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Call, message, meet, and access files, from wherever you are.</string>
 			<key>developer</key>
 			<string>Serverdata.Net, Inc.</string>
 			<key>display_name</key>
