@@ -72,8 +72,6 @@
                   <string>0755</string>
                   <key>Library/Java/JavaVirtualMachines</key>
                   <string>0755</string>
-                  <key>Library/Java/JavaVirtualMachines/zulu-%RELEASE%.%JVM%</key>
-                  <string>0755</string>
                </dict>
             </dict>
          </dict>
@@ -83,7 +81,7 @@
             <key>Arguments</key>
             <dict>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Library/Java/JavaVirtualMachines/zulu--%RELEASE%.%JVM%</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Library/Java/JavaVirtualMachines/zulu-%RELEASE%.%JVM%/</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/zulu-%RELEASE%.%JVM%/Payload</string>
                 <key>purge_destination</key>
