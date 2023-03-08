@@ -12,10 +12,7 @@
     <key>Identifier</key>
     <string>com.github.peetinc.pkg.AzulZulu</string>
     <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>AzulZuluOpenJRE8LTS</string>
-    </dict>
+    <dict/>
     <key>MinimumVersion</key>
     <string>0.4.3</string>
     <key>ParentRecipe</key>

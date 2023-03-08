@@ -14,12 +14,12 @@
     <string>com.github.peetinc.download.AzulZulu</string>
     <key>Input</key>
     <dict>
-        <key>NAME</key>
-        <string>AzulZuluOpenJRE8LTS</string>
         <key>ARCHITECTURE</key>
         <string>aarch</string>
         <key>JVM</key>
         <string>jdk</string>
+        <key>JVM_NAME</key>
+        <string>JDK</string>
         <key>RELEASE</key>
         <string>8</string>
         <key>SUPPORT</key>
