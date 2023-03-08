@@ -16,6 +16,8 @@
     <dict>
         <key>NAME</key>
         <string>AzulZuluOpenJRE8LTS</string>
+        <key>MIN_OS_VER</key>
+        <string>10.6</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Azul</string>
         <key>pkginfo</key>
@@ -32,6 +34,8 @@
             <string>Azul Systems</string>
             <key>display_name</key>
             <string>Azul Zulu OpenJRE 8 LTS</string>
+            <key>minimum_os_version</key>
+			<string>%MIN_OS_VER%</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
@@ -114,13 +118,6 @@
             <dict>
                 <key>info_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/Library/Java/JavaVirtualMachines/zulu-%RELEASE%.%JVM%/Contents/Info.plist</string>
-                <key>plist_keys</key>
-                <dict>
-                    <key>CFBundleVersion</key>
-                    <string>version</string>
-                    <key>JVMMinimumSystemVersion</key>
-                    <string>minimum_os_version</string>
-                </dict>
             </dict>
         </dict>
         <dict>
@@ -132,8 +129,6 @@
                 <dict>
                     <key>version</key>
                     <string>%version%</string>
-                    <key>minimum_os_version</key>
-					<string>%minimum_os_version%</string>
                 </dict>
             </dict>
         </dict>
