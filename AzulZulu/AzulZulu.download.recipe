@@ -21,6 +21,8 @@
         <string>jre</string>
         <key>RELEASE</key>
         <string>8</string>
+        <key>SUPPORT</key>
+        <string>LTS</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
