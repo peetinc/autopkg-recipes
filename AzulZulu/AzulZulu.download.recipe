@@ -6,8 +6,9 @@
     <string>Downloads the current release version of Azul Zulu OpenJDK or JRE 7, 8, 11, 17 LTS or STS.
 	Set the NAME key from "AzulZuluOpenJRE8LTS" to the best name for you based on your variables.
 	Set the ARCHITECTURE key to "x" to download the Intel version or "aarch" for Apple Silicon version.
-	Set the JVM key to "jre" or "jdk" (note: jre is "Java Runtime Environment". jdk is "Java Development Kit".)
+	Set the JVM key to "jre" or "jdk" (note: !!"jre" only works with "aarch"!! ...jre is "Java Runtime Environment". jdk is "Java Development Kit".)
 	Set the RELEASE key to "7" (Note: LTS, Intel-Only), "8" (Note: LTS), "11" (Note: LTS), "13" (Note: MTS), "15" (Note: MTS), "17" (Note: LTS), "18" (Note: STS) or "19" (Note: STS)
+	Set the SUPPORT key to "LTS", "MTS", or "STS" (Note only used for munki display_name and name)
 	</string>
     <key>Identifier</key>
     <string>com.github.peetinc.download.AzulZulu</string>
@@ -18,7 +19,7 @@
         <key>ARCHITECTURE</key>
         <string>aarch</string>
         <key>JVM</key>
-        <string>jre</string>
+        <string>jdk</string>
         <key>RELEASE</key>
         <string>8</string>
         <key>SUPPORT</key>

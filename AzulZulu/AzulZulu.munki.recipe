@@ -6,16 +6,14 @@
     <string>Downloads the current release version of Azul Zulu, builds a package and imports it to Munki.
     Set the NAME key from "AzulZuluOpenJRE8LTS" to the best name for you based on your variables.
 	Set the ARCHITECTURE key to "x" to download the Intel version or "aarch" for Apple Silicon version.
-	Set the JVM key to "jre" or "jdk" (note: jre is "Java Runtime Environment". jdk is "Java Development Kit".)
+	Set the JVM key to "jre" or "jdk" (note: !!"jre" only works with "aarch"!! ...jre is "Java Runtime Environment". jdk is "Java Development Kit".)
 	Set the RELEASE key to "7" (Note: LTS, Intel-Only), "8" (Note: LTS), "11" (Note: LTS), "13" (Note: MTS), "15" (Note: MTS), "17" (Note: LTS), "18" (Note: STS) or "19" (Note: STS)
-	Set the SUPPORT key to "LTS", "MTS", or "STS" (Note only used for package names)
+	Set the SUPPORT key to "LTS", "MTS", or "STS" (Note only used for munki display_name and name)
 	</string>
     <key>Identifier</key>
     <string>com.github.peetinc.munki.AzulZulu</string>
     <key>Input</key>
     <dict>
-        <key>NAME</key>
-        <string>AzulZuluOpenJRE8LTS</string>
         <key>MIN_OS_VER</key>
         <string>10.6</string>
         <key>MUNKI_ARCH</key>
@@ -39,7 +37,7 @@
             <key>minimum_os_version</key>
 			<string>%MIN_OS_VER%</string>
             <key>name</key>
-            <string>%NAME%</string>
+            <string>AzulZuluOpen%JVM%%RELEASE%%SUPPORT%</string>
             <key>supported_architectures</key>
 			<array>
 				<string>%MUNKI_ARCH%</string>
