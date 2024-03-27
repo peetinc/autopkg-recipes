@@ -20,6 +20,8 @@
 			<array>
 				<string>PDFWriter Utility.app</string>
 			</array>
+			<key>category</key>
+			<string>Printing</string>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
@@ -29,7 +31,7 @@
 			<key>developer</key>
 			<string>Real World Technology Solutions Pty Ltd</string>
 			<key>display_name</key>
-			<string>PDFWriter Utility</string>
+			<string>RWTS-PDFwriter</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
