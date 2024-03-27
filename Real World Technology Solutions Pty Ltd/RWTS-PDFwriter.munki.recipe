@@ -10,6 +10,8 @@
 	<string>com.github.peetinc.munki.RWTS-PDFwriter</string>
 	<key>Input</key>
 	<dict>
+		<key>MIN_OS</key>
+		<string>11</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
@@ -32,6 +34,8 @@
 			<string>Real World Technology Solutions Pty Ltd</string>
 			<key>display_name</key>
 			<string>RWTS-PDFwriter</string>
+			<key>minosversion</key>
+			<string>%MIN_OS%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
