@@ -5,13 +5,13 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of PDFWriter Utility.</string>
+	<string>Downloads the latest version of RWTS-PDFwriter.</string>
 	<key>Identifier</key>
-	<string>com.github.peetinc.download.PDFWriterUtility</string>
+	<string>com.github.peetinc.download.RWTS-PDFwriter</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>PDFWriter Utility</string>
+		<string>RWTS-PDFwriter</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>

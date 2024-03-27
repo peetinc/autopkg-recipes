@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of PDFWriter Utility and imports it into Munki.</string>
+	<string>Downloads the latest version of RWTS-PDFwriter and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.peetinc.munki.PDFWriterUtility</string>
+	<string>com.github.peetinc.munki.RWTS-PDFwriter</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>PDFWriter Utility</string>
+		<string>RWTS-PDFwriter</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peetinc.download.PDFWriterUtility</string>
+	<string>com.github.peetinc.download.RWTS-PDFwriter</string>
 	<key>Process</key>
 	<array>
 		<dict>
