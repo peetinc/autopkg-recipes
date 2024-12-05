@@ -42,7 +42,7 @@ Cursor is the best way to code with AI.</string>
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
 			<array>
-				<string>arm_64</string>
+				<string>%SUPPORTED_ARCH%</string>
 			</array>
 			<key>unattended_install</key>
 			<true/>
