@@ -19,15 +19,7 @@
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
-			<array>
-				<string>Synology Surveillance Station Client Helper (Plugin).app</string>
-				<string>Surveillance_Station_Client.app</string>
-				<string>Monitor Center.app</string>
-				<string>Synology Surveillance Station Client Helper (GPU).app</string>
-				<string>Synology Surveillance Station Client Helper.app</string>
-				<string>Recording.app</string>
-				<string>Synology Surveillance Station Client Helper (Renderer).app</string>
-			</array>
+			<array/>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
