@@ -12,6 +12,8 @@
 	<dict>
 		<key>APP_FILENAME</key>
 		<string>Surveillance_Station_Client</string>
+		<key>MUNKI_MIN_OS</key>
+		<string>10.10</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
@@ -32,6 +34,8 @@
 			<string>Synology Inc.</string>
 			<key>display_name</key>
 			<string>Synology Surveillance Station Client</string>
+			<key>minimum_os_version</key>
+			<string>%MUNKI_MIN_OS%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
