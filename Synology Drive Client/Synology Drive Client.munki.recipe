@@ -18,7 +18,7 @@
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>Synology Drive Client.app</string>
+				<array/>
 			</array>
 			<key>catalogs</key>
 			<array>
