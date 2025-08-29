@@ -69,7 +69,7 @@ exit 0</string>
                 <key>preinstall_script</key>
                 <string>#!/bin/bash
 
-#Script to create /Users/Shared/SplashtopStreamer/.PreInstall with appropriate variables.
+#Script to create "$PreInstallDirectory/.PreInstall" with appropriate variables. In 2024/2025 Splashtop changed this to need to be next to the .pkg
 #If /Users/Shared/SplashtopStreamer/.PreInstall is in place when splashtop package is installed then it will be correctly deployed
 
 if [ -f "/Users/Shared/SplashtopStreamer/Splashtop-Streamer.plist" ]; then
@@ -77,10 +77,7 @@ if [ -f "/Users/Shared/SplashtopStreamer/Splashtop-Streamer.plist" ]; then
   exit 0
 fi
 
-if [ ! -d /Users/Shared/SplashtopStreamer ]; then
-  mkdir -p /Users/Shared/SplashtopStreamer;
-  chmod -R 777 /Users/Shared/SplashtopStreamer
-fi
+PreInstallDirectory="/Library/Managed Installs/Cache"
 
 #Do not install Soundflower driver. This helps with deployment via Munki.
 #Installing Soundflower driver will hang if the Mac has no users logged in at the time of deployment.
@@ -92,7 +89,7 @@ HidePreferenceDomainSelection=true
 #ShowDeployMode must be true to attempt to deploy
 ShowDeployMode=true
 SplashtopAccount=""
-DeployCode="%DEPLOY_CODE%"
+DeployCode="-REPLACE-ME-"
 
 #show deploy warning
 ShowDeployLoginWarning=false
@@ -129,38 +126,37 @@ touch "$No_Driver"
 echo NO DRIVER
 fi
 
-/usr/libexec/PlistBuddy -c "Add Common:EulaAccepted bool $EulaAccepted" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add Common:HidePreferenceDomainSelection bool $HidePreferenceDomainSelection" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add Common:EulaAccepted bool $EulaAccepted" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add Common:HidePreferenceDomainSelection bool $HidePreferenceDomainSelection" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:ShowDeployLoginWarning bool $ShowDeployLoginWarning" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:ShowDeployMode bool $ShowDeployMode" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:SplashtopAccount string $SplashtopAccount" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:DeployCode string $DeployCode" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:DeployTeamNameCache string" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:DeployTeamOwnerCache string" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:LastDeployCode string" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:TeamCode string" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:TeamCodeInUse string" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:ShowDeployLoginWarning bool $ShowDeployLoginWarning" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:ShowDeployMode bool $ShowDeployMode" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:SplashtopAccount string $SplashtopAccount" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:DeployCode string $DeployCode" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:DeployTeamNameCache string" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:DeployTeamOwnerCache string" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:LastDeployCode string" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:TeamCode string" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:TeamCodeInUse string" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:HostName string $HostName" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:HostName string $HostName" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:EnablePermissionProtection integer $EnablePermissionProtection" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:EnablePermissionProtection integer $EnablePermissionProtection" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:init_security_code string $init_security_code" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:EnableSecurityCodeProtection bool $EnableSecurityCodeProtection" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:EnableOSCredential bool $EnableOSCredential" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:init_security_code string $init_security_code" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:EnableSecurityCodeProtection bool $EnableSecurityCodeProtection" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:EnableOSCredential bool $EnableOSCredential" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:LegacyConnectionLoopbackOnly bool $LegacyConnectionLoopbackOnly" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:LegacyConnectionLoopbackOnly bool $LegacyConnectionLoopbackOnly" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:HideTrayIcon bool $HideTrayIcon" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:HideTrayIcon bool $HideTrayIcon" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:DefaultClientDeviceName string $DefaultClientDeviceName" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:DefaultClientDeviceName string $DefaultClientDeviceName" "$PreInstallDirectory/.PreInstall"
 
-/usr/libexec/PlistBuddy -c "Add STP:FirstTimeClose bool $FirstTimeClose" /Users/Shared/SplashtopStreamer/.PreInstall
-/usr/libexec/PlistBuddy -c "Add STP:FirstTimeLogin bool $FirstTimeLogin" /Users/Shared/SplashtopStreamer/.PreInstall
+/usr/libexec/PlistBuddy -c "Add STP:FirstTimeClose bool $FirstTimeClose" "$PreInstallDirectory/.PreInstall"
+/usr/libexec/PlistBuddy -c "Add STP:FirstTimeLogin bool $FirstTimeLogin" "$PreInstallDirectory/.PreInstall"
 
-exit 0
-        </string>
+exit 0</string>
                 <key>unattended_install</key>
                 <true/>
                 <key>unattended_uninstall</key>
