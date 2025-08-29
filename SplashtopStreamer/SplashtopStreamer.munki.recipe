@@ -689,6 +689,15 @@ doinstall</string>
                 <string>MunkiPkginfoMerger</string>
             </dict>
             <dict>
+                <key>Processor</key>
+                <string>DmgMounter</string>
+                <key>Arguments</key>
+                <dict>
+                    <key>dmg_path</key>
+                    <string>%pathname%</string>
+                </dict>
+            </dict>
+            <dict>
                 <key>Arguments</key>
                 <dict>
                     <key>pkg_path</key>
