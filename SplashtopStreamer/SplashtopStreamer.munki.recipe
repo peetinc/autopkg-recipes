@@ -691,8 +691,17 @@ doinstall</string>
             <dict>
                 <key>Arguments</key>
                 <dict>
+                    <key>dmg_path</key>
+                    <string>%pathname%</string>
+                </dict>
+                <key>Processor</key>
+                <string>DmgMounter</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
                     <key>pkg_path</key>
-                    <string>%pathname%/Splashtop Streamer.pkg</string>
+                    <string>%dmg_mount_path%/Splashtop Streamer.pkg</string>
                     <key>repo_subdirectory</key>
                     <string>%MUNKI_REPO_SUBDIR%</string>
                 </dict>
