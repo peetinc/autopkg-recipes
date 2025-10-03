@@ -16,10 +16,8 @@
 		<string>autopkg</string>
 		<key>pkginfo</key>
 		<dict>
-			<key>blocking_applications</key>
-			<array>
-				<string>autopkg.app</string>
-			</array>
+			<key>category</key>
+			<string>SysAdmin</string>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
@@ -27,7 +25,7 @@
 			<key>description</key>
 			<string>Automating packaging and software distribution on macOS.</string>
 			<key>developer</key>
-			<string></string>
+			<string>autopkg</string>
 			<key>display_name</key>
 			<string>autopkg</string>
 			<key>name</key>
