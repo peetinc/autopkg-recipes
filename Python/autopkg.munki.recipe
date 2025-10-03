@@ -5,20 +5,20 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.4.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Python and imports it into Munki.</string>
+	<string>Downloads the latest version of autopkg and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.peetinc.munki.Python</string>
+	<string>com.github.peetinc.munki.autopkg</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Python</string>
+		<string>autopkg</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>Python.app</string>
+				<string>autopkg.app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
@@ -29,7 +29,7 @@
 			<key>developer</key>
 			<string></string>
 			<key>display_name</key>
-			<string>Python</string>
+			<string>autopkg</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peetinc.download.Python</string>
+	<string>com.github.peetinc.download.autopkg</string>
 	<key>Process</key>
 	<array>
 		<dict>
