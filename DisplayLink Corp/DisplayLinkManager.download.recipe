@@ -90,10 +90,25 @@
 				<key>source_path</key>
 				<string>%found_filename%</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
+				<key>overwrite</key>
+				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
+			<key>Comment</key>
+			<string>Copy the extracted PKG and update pathname to point to it</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
 		</dict>
 	</array>
 </dict>
