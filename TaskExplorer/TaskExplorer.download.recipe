@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Based on com.github.ahousseini-recipes.download.TaskExplorer. Forked because that recipe pins the code requirement to identifier "com.objective-see.TaskExplorer", but Objective-See re-cased the bundle identifier to "com.objective-see.taskexplorer" in TaskExplorer 3.0.0. Code requirements match the identifier case-sensitively, so CodeSignatureVerifier fails on 3.0.0 and later. The signing identity is unchanged (Developer ID Application: Objective-See, LLC, Team ID VBG97UB4TA); only the casing moved.</string>
+	<key>Description</key>
+	<string>Downloads the latest version of TaskExplorer.</string>
+	<key>Identifier</key>
+	<string>com.github.peetinc.download.TaskExplorer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>TaskExplorer</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>cask_name</key>
+				<string>taskexplorer</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.ahousseini-recipes.SharedProcessors/HomebrewCaskURL</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/TaskExplorer.app</string>
+				<key>requirement</key>
+				<string>anchor apple generic and identifier "com.objective-see.taskexplorer" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = VBG97UB4TA)</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
